@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>शुभ विवाह निमंत्रण | प्रियंका &amp; नन्दकिशोर</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --wine: #6e1f2f;
+      --wine-dark: #3b0d17;
+      --gold: #e6c36a;
+      --gold-bright: #ffe599;
+      --ivory: #fffaf2;
+      --blush: #fdecef;
+      --ink: #2b1117;
+      --muted: #6c4a52;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #fff5f7 0%, var(--blush) 45%, #f7d9df 100%);
+      color: var(--ink);
+      font-family: 'Tiro Devanagari Hindi', 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, .serif {
+      font-family: 'Playfair Display', 'Tiro Devanagari Hindi', serif;
+    }
+
+    .meta-font {
+      font-family: 'Montserrat', 'Tiro Devanagari Hindi', sans-serif;
+    }
+
+    /* Ambient Petals & Sparkles */
+    .fx-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 5;
+      overflow: hidden;
+    }
+
+    .petal {
+      position: absolute;
+      top: -40px;
+      border-radius: 100% 0 100% 25%;
+      opacity: 0.85;
+      animation: fall linear infinite;
+      box-shadow: 0 2px 8px rgba(110, 31, 47, 0.2);
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translate3d(0, -40px, 0) rotate(0deg);
+        opacity: 0;
+      }
+      12% { opacity: 0.9; }
+      88% { opacity: 0.85; }
+      100% {
+        transform: translate3d(var(--drift, 60px), 108vh, 0) rotate(540deg);
+        opacity: 0;
+      }
+    }
+
+    .sparkle {
+      position: fixed;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, var(--gold) 65%, transparent 100%);
+      pointer-events: none;
+      z-index: 60;
+      animation: popSparkle 0.75s ease-out forwards;
+    }
+
+    @keyframes popSparkle {
+      0% { transform: scale(0.3); opacity: 1; }
+      100% { transform: scale(2.2) translateY(-18px); opacity: 0; }
+    }
+
+    /* Floating Sound Control */
+    .music-btn {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 50;
+      background: linear-gradient(135deg, var(--wine-dark), var(--wine));
+      color: var(--gold-bright);
+      border: 1.5px solid var(--gold);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(59, 13, 23, 0.35);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* PAGE 1: 3D WINE VELVET BOOK COVER */
+    #cover-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 40;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 229, 153, 0.35), transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(110, 31, 47, 0.18), transparent 45%),
+        linear-gradient(160deg, #fff4f6 0%, var(--blush) 55%, #f5ced6 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    #cover-screen.opened {
+      opacity: 0;
+      transform: scale(1.06);
+      pointer-events: none;
+    }
+
+    .roses-ring {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+
+    .rose-badge {
+      position: absolute;
+      font-size: 28px;
+      filter: drop-shadow(0 6px 12px rgba(110, 31, 47, 0.28));
+      animation: floatRose 3.6s ease-in-out infinite;
+    }
+    .rose-tl { top: -8px; left: -10px; animation-delay: 0s; }
+    .rose-tr { top: -8px; right: -10px; animation-delay: 0.9s; }
+    .rose-bl { bottom: -8px; left: -10px; animation-delay: 1.8s; }
+    .rose-br { bottom: -8px; right: -10px; animation-delay: 2.7s; }
+
+    @keyframes floatRose {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-7px) scale(1.08); }
+    }
+
+    .velvet-book {
+      width: min(340px, 84vw);
+      min-height: 450px;
+      background:
+        repeating-linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.015) 0px,
+          rgba(255, 255, 255, 0.015) 2px,
+          transparent 2px,
+          transparent 6px
+        ),
+        linear-gradient(145deg, #86263a 0%, var(--wine) 48%, var(--wine-dark) 100%);
+      border-radius: 8px 22px 22px 8px;
+      border: 2px solid var(--gold);
+      box-shadow:
+        -10px 14px 28px rgba(43, 17, 23, 0.45),
+        0 0 35px rgba(230, 195, 106, 0.45),
+        inset 0 0 28px rgba(255, 229, 153, 0.18);
+      padding: 26px 20px;
+      color: var(--ivory);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .velvet-book::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, transparent, var(--gold-bright), transparent);
+      opacity: 0.7;
+    }
+
+    .velvet-book:hover {
+      transform: translateY(-5px) rotateY(-4deg);
+      box-shadow:
+        -12px 20px 34px rgba(43, 17, 23, 0.5),
+        0 0 48px rgba(255, 229, 153, 0.65);
+    }
+
+    .book-inner-frame {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(230, 195, 106, 0.65);
+      border-radius: 6px 16px 16px 6px;
+      padding: 18px 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .ganesh-emblem {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 229, 153, 0.25), rgba(110, 31, 47, 0.85));
+      border: 1.5px solid var(--gold);
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      color: var(--gold-bright);
+      box-shadow: 0 0 18px rgba(230, 195, 106, 0.5);
+    }
+
+    .book-couple {
+      font-size: 26px;
+      line-height: 1.35;
+      color: var(--gold-bright);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+    }
+
+    .tap-pill {
+      margin-top: 16px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-bright), var(--gold));
+      color: var(--wine-dark);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 10px 22px;
+      border-radius: 999px;
+      box-shadow: 0 6px 20px rgba(230, 195, 106, 0.55);
+      animation: pulsePill 1.8s infinite;
+    }
+
+    @keyframes pulsePill {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* MAIN CONTAINER */
+    #invitation-app {
+      position: relative;
+      z-index: 10;
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 20px 14px 60px;
+    }
+
+    .section-card {
+      background: rgba(255, 250, 242, 0.94);
+      border: 1.5px solid rgba(212, 175, 55, 0.55);
+      border-radius: 24px;
+      padding: 24px 18px;
+      margin-bottom: 22px;
+      box-shadow:
+        0 14px 35px rgba(110, 31, 47, 0.12),
+        inset 0 0 0 5px rgba(253, 236, 239, 0.65);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-card::before {
+      content: "✿ ❀ ✿";
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      letter-spacing: 6px;
+      color: rgba(110, 31, 47, 0.35);
+    }
+
+    .mantra-box {
+      text-align: center;
+      padding-bottom: 14px;
+      border-bottom: 1px dashed rgba(110, 31, 47, 0.25);
+      margin-bottom: 16px;
+    }
+
+    .shree-ganesh {
+      color: var(--wine);
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .shloka {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    /* PAGE 2: HERO & COUPLE */
+    .hero-banner-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--gold);
+      margin: 14px 0 18px;
+      box-shadow: 0 10px 24px rgba(59, 13, 23, 0.22);
+      background: linear-gradient(135deg, var(--wine-dark), var(--wine));
+    }
+
+    .hero-banner-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: slowKenBurns 14s ease-in-out infinite alternate;
+    }
+
+    @keyframes slowKenBurns {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    .couple-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .person-box {
+      background: linear-gradient(180deg, #fff 0%, #fff6f7 100%);
+      border: 1px solid rgba(230, 195, 106, 0.7);
+      border-radius: 16px;
+      padding: 14px 12px;
+    }
+
+    .person-name {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--wine);
+      min-height: 32px;
+    }
+
+    .parents-text {
+      font-size: 13.5px;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-top: 4px;
+    }
+
+    .amp-divider {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      color: #b88926;
+      line-height: 1;
+    }
+
+    /* PAGE 3: GOLDEN SCROLL & COUNTDOWN */
+    .scroll-box {
+      background: linear-gradient(180deg, #fffdf7 0%, #faecc8 55%, #f4dfad 100%);
+      border: 2px solid #c99b32;
+      border-radius: 18px;
+      padding: 18px 14px;
+      text-align: center;
+      position: relative;
+      box-shadow: inset 0 0 18px rgba(184, 137, 38, 0.25);
+    }
+
+    .tassel-trigger {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--wine);
+      color: var(--gold-bright);
+      border: 1.5px solid var(--gold);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+
+    .finger-bob {
+      display: inline-block;
+      animation: bobDown 1.1s ease-in-out infinite;
+    }
+
+    @keyframes bobDown {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(4px); }
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .cd-item {
+      background: linear-gradient(160deg, var(--wine), var(--wine-dark));
+      color: var(--gold-bright);
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      padding: 10px 4px;
+      text-align: center;
+    }
+
+    .cd-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .cd-label {
+      font-size: 11px;
+      opacity: 0.92;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    .gold-btn, .wine-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s ease;
+    }
+
+    .gold-btn:active, .wine-btn:active { transform: scale(0.97); }
+
+    .gold-btn {
+      background: linear-gradient(135deg, var(--gold), #cfa038);
+      color: var(--wine-dark);
+      box-shadow: 0 6px 16px rgba(207, 160, 56, 0.35);
+    }
+
+    .wine-btn {
+      background: linear-gradient(135deg, var(--wine), var(--wine-dark));
+      color: var(--gold-bright);
+      border: 1px solid var(--gold);
+      box-shadow: 0 6px 16px rgba(110, 31, 47, 0.28);
+    }
+
+    /* PAGE 4: SWIPEABLE 3D FUNCTIONS CAROUSEL */
+    .section-heading {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .section-heading h2 {
+      font-size: 22px;
+      color: var(--wine);
+    }
+
+    .section-heading p {
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .carousel-viewport {
+      overflow: hidden;
+      width: 100%;
+      touch-action: pan-y;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .fn-slide {
+      min-width: 100%;
+      padding: 4px;
+    }
+
+    .fn-card {
+      background: #fff;
+      border: 1.5px solid rgba(230, 195, 106, 0.8);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 26px rgba(110, 31, 47, 0.14);
+    }
+
+    .fn-photo {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: #f8e5e9;
+    }
+
+    .fn-body {
+      padding: 16px;
+      text-align: center;
+    }
+
+    .fn-title {
+      font-size: 21px;
+      color: var(--wine);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .fn-date-badge {
+      display: inline-block;
+      background: var(--blush);
+      color: var(--wine-dark);
+      border: 1px solid rgba(110, 31, 47, 0.25);
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .fn-meta {
+      font-size: 13px;
+      color: var(--ink);
+      line-height: 1.65;
+    }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .dots-row {
+      display: flex;
+      gap: 7px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: rgba(110, 31, 47, 0.25);
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .dot.active {
+      width: 22px;
+      border-radius: 999px;
+      background: var(--wine);
+    }
+
+    /* PAGE 6: GRAND CELEBRATION / VENUE */
+    .wine-showcase {
+      background: linear-gradient(155deg, #7d2235 0%, var(--wine) 52%, var(--wine-dark) 100%);
+      color: var(--ivory);
+      border: 2px solid var(--gold);
+    }
+
+    .wine-showcase::before {
+      color: rgba(255, 229, 153, 0.55);
+    }
+
+    .wine-showcase h2 {
+      color: var(--gold-bright);
+    }
+
+    .info-box-dark {
+      background: rgba(255, 250, 242, 0.09);
+      border: 1px solid rgba(230, 195, 106, 0.45);
+      border-radius: 16px;
+      padding: 14px;
+      margin-top: 12px;
+      font-size: 13.5px;
+      line-height: 1.7;
+    }
+
+    /* PAGE 7: LOCATION MAP CARD */
+    .map-preview-card {
+      background: linear-gradient(135deg, #fff7e6, #ffe9ec);
+      border: 1.5px solid var(--gold);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .pin-icon {
+      font-size: 32px;
+      display: inline-block;
+      animation: bobDown 1.6s ease-in-out infinite;
+    }
+
+    /* PAGE 8 & DESIGNER SECTION */
+    .darshana-list {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--ink);
+      background: #fff9fa;
+      border: 1px solid rgba(110, 31, 47, 0.16);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin-top: 10px;
+    }
+
+    .designer-card {
+      background: linear-gradient(160deg, #2d0b12 0%, #581624 55%, #24080e 100%);
+      color: var(--ivory);
+      border: 2px solid var(--gold);
+      border-radius: 22px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 14px 32px rgba(36, 8, 14, 0.35);
+    }
+
+    .designer-photo {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1.5px solid var(--gold);
+      margin: 12px 0;
+      background: #3b0d17;
+    }
+
+    .designer-badge {
+      display: inline-block;
+      background: rgba(230, 195, 106, 0.18);
+      color: var(--gold-bright);
+      border: 1px solid var(--gold);
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: var(--wine-dark);
+      color: var(--gold-bright);
+      border: 1px solid var(--gold);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 13px;
+      z-index: 90;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Petals Layer -->
+  <div class="fx-layer" id="petals-layer"></div>
+
+  <!-- Music Toggle -->
+  <button class="music-btn" id="music-toggle" onclick="toggleMusic()">
+    <span>🎵</span> <span id="music-label">संगीत ऑन</span>
+  </button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast-box"></div>
+
+  <!-- PAGE 1: 3D WINE VELVET OPENING BOOK -->
+  <section id="cover-screen">
+    <div class="roses-ring">
+      <span class="rose-badge rose-tl">🌹</span>
+      <span class="rose-badge rose-tr">🌹</span>
+      <span class="rose-badge rose-bl">🌺</span>
+      <span class="rose-badge rose-br">🌺</span>
+
+      <div class="velvet-book" onclick="openInvitation()">
+        <div class="book-inner-frame">
+          <div style="font-size:13px; letter-spacing:1.5px; color:var(--gold-bright);">
+            ॥ श्री गणेशाय नमः ॥
+          </div>
+          <div class="ganesh-emblem">ॐ</div>
+          <div>
+            <div style="font-size:12px; color:#f8dce2; margin-bottom:6px;">शुभ विवाह निमंत्रण</div>
+            <div class="book-couple">
+              प्रियंका<br>
+              <span style="font-size:18px; color:var(--gold);">♥</span><br>
+              नन्दकिशोर (मुन्ना)
+            </div>
+            <div style="font-size:12px; color:var(--gold-bright); margin-top:10px;">
+              30 नवम्बर 2026 • सोमवार
+            </div>
+          </div>
+          <div style="font-size:11.5px; color:#f3cbd3;">
+            पुस्तक खोलने के लिए टैप करें
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="tap-pill" onclick="openInvitation()">✨ निमंत्रण खोलें (Tap to Open)</button>
+  </section>
+
+  <!-- MAIN INVITATION CONTENT -->
+  <main id="invitation-app">
+
+    <!-- PAGE 2: WEDDING INVITATION & COUPLE -->
+    <section class="section-card" id="page-invite">
+      <div class="mantra-box">
+        <div class="shree-ganesh">॥ श्री गणेशाय नमः ॥</div>
+        <p class="shloka">
+          वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ ।<br>
+          निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥
+        </p>
+      </div>
+
+      <div class="section-heading">
+        <p class="meta-font" style="letter-spacing:1.5px; text-transform:uppercase;">सस्नेह निमंत्रण • Together With Families</p>
+        <h2>मांगलिक परिणय उत्सव</h2>
+      </div>
+
+      <div class="hero-banner-wrap">
+        <img src="entry.png" alt="वर-वधू प्रियंका एवं नन्दकिशोर" onerror="this.style.display='none'" />
+      </div>
+
+      <div class="couple-grid">
+        <div class="person-box">
+          <div style="font-size:11.5px; color:var(--muted);">वधू (आयुष्मती)</div>
+          <div class="person-name" id="typed-bride"></div>
+          <p class="parents-text">
+            सुपुत्री — <strong>श्रीमती अंजली देवी</strong> व <strong>श्री नागेन्द्र जायसवाल</strong><br>
+            ग्राम व पोस्ट-मिश्रौलिया, जिला-महराजगंज
+          </p>
+        </div>
+
+        <div class="amp-divider">&amp;</div>
+
+        <div class="person-box">
+          <div style="font-size:11.5px; color:var(--muted);">वर (चिरंजीवी)</div>
+          <div class="person-name" id="typed-groom"></div>
+          <p class="parents-text">
+            सुपुत्र — <strong>स्व. तारा देवी</strong> व <strong>श्री लखीचन्द्र जायसवाल</strong><br>
+            अम्बेडकर नगर वार्ड नं. 04, कसया, जिला-कुशीनगर
+          </p>
+        </div>
+      </div>
+
+      <p style="text-align:center; font-size:13.5px; line-height:1.7; margin-top:16px; color:var(--ink);">
+        ईश्वर की असीम अनुकम्पा से इस मंगलमय परिणय बेला पर हम आपकी गरिमामयी उपस्थिति के लिए आकांक्षी हैं। कृपया अपने स्नेहाशीष से वर-कन्या को अभिसिंचित कर हमें अनुगृहीत करें।
+      </p>
+    </section>
+
+    <!-- PAGE 3: SAVE THE DATE SCROLL & COUNTDOWN -->
+    <section class="section-card" id="page-save-date">
+      <div class="section-heading">
+        <h2>शुभ लग्न व काउंटडाउन</h2>
+        <p>पवित्र विवाह तिथि: 30-11-2026 (दिन - सोमवार)</p>
+      </div>
+
+      <div class="scroll-box">
+        <div style="font-size:13px; color:var(--wine); font-weight:700;">🪔 शुभ परिणय संस्कार 🪔</div>
+        <div style="font-size:21px; font-weight:700; color:var(--wine-dark); margin:6px 0;">
+          सोमवार, 30 नवम्बर 2026
+        </div>
+        <div style="font-size:13px; color:var(--muted);">
+          समस्त वैवाहिक कार्यक्रम: अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज
+        </div>
+
+        <button class="tassel-trigger" onclick="celebrateScroll()">
+          <span class="finger-bob">👇</span> आशीर्वाद व पुष्प वर्षा करें
+        </button>
+
+        <div class="countdown-grid" id="countdown-box">
+          <div class="cd-item"><span class="cd-num" id="cd-days">00</span><span class="cd-label">दिन</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-hours">00</span><span class="cd-label">घंटे</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-mins">00</span><span class="cd-label">मिनट</span></div>
+          <div class="cd-item"><span class="cd-num" id="cd-secs">00</span><span class="cd-label">सेकंड</span></div>
+        </div>
+
+        <div class="btn-row">
+          <button class="gold-btn" onclick="addWeddingToCalendar()">📅 कैलेंडर में सेव करें</button>
+          <button class="wine-btn" onclick="burstPetals()">🌸 पुष्प वर्षा</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 4: SWIPEABLE 3D WEDDING FUNCTIONS CAROUSEL -->
+    <section class="section-card" id="page-functions">
+      <div class="section-heading">
+        <h2>मांगलिक कार्यक्रम</h2>
+        <p>अन्य रस्में देखने के लिए कार्ड को बाएँ या दाएँ स्वाइप करें</p>
+      </div>
+
+      <div class="carousel-viewport" id="fn-viewport">
+        <div class="carousel-track" id="fn-track">
+
+          <!-- 1. Shubh Mehndi -->
+          <div class="fn-slide">
+            <div class="fn-card">
+              <img class="fn-photo" src="mehndi.png" alt="शुभ मेहंदी" onerror="this.style.display='none'" />
+              <div class="fn-body">
+                <div class="fn-title">🌿 शुभ मेहंदी</div>
+                <div class="fn-date-badge">दिनांक: 29-11-2026 • दिन - रविवार</div>
+                <div class="fn-meta">
+                  <strong>उत्सव:</strong> मंगल मेहंदी व संगीत संध्या<br>
+                  <strong>स्थल:</strong> अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज<br>
+                  <strong>परिधान / रंग:</strong> पारंपरिक उत्सवी परिधान • हरा व सुनहरा
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Shubh Haldi -->
+          <div class="fn-slide">
+            <div class="fn-card">
+              <img class="fn-photo" src="haldi.png" alt="शुभ हल्दी" onerror="this.style.display='none'" />
+              <div class="fn-body">
+                <div class="fn-title">🌼 शुभ हल्दी</div>
+                <div class="fn-date-badge">दिनांक: 29-11-2026 • दिन - रविवार</div>
+                <div class="fn-meta">
+                  <strong>उत्सव:</strong> शुभ हल्दी व उबटन संस्कार<br>
+                  <strong>स्थल:</strong> अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज<br>
+                  <strong>परिधान / रंग:</strong> पीताम्बर व पारंपरिक वस्त्र • हल्दी पीला व केसरी
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Shubh Vivah -->
+          <div class="fn-slide">
+            <div class="fn-card">
+              <img class="fn-photo" src="vivah.png" alt="शुभ विवाह" onerror="this.style.display='none'" />
+              <div class="fn-body">
+                <div class="fn-title">💍 शुभ विवाह</div>
+                <div class="fn-date-badge">दिनांक: 30-11-2026 • दिन - सोमवार</div>
+                <div class="fn-meta">
+                  <strong>उत्सव:</strong> पाणिग्रहण संस्कार व मंगल फेरे<br>
+                  <strong>स्थल:</strong> अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज<br>
+                  <strong>परिधान / रंग:</strong> शाही वैवाहिक परिधान • लाल, मैरून व सुनहरा
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Kanya Vidaai -->
+          <div class="fn-slide">
+            <div class="fn-card">
+              <img class="fn-photo" src="vidai.png" alt="कन्या विदाई" onerror="this.style.display='none'" />
+              <div class="fn-body">
+                <div class="fn-title">🙏 कन्या विदाई</div>
+                <div class="fn-date-badge">दिनांक: 01-12-2026 • दिन - मंगलवार</div>
+                <div class="fn-meta">
+                  <strong>उत्सव:</strong> स्नेहपूर्ण विदाई व आशीर्वाद बेला<br>
+                  <strong>स्थल:</strong> अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज<br>
+                  <strong>परिधान / रंग:</strong> पारंपरिक परिधान • सौम्य व सुनहरा
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="wine-btn" style="padding:6px 12px;" onclick="moveSlide(-1)">‹</button>
+        <div class="dots-row" id="fn-dots"></div>
+        <button class="wine-btn" style="padding:6px 12px;" onclick="moveSlide(1)">›</button>
+      </div>
+    </section>
+
+    <!-- PAGE 6: GRAND CELEBRATION & VENUE -->
+    <section class="section-card wine-showcase" id="page-venue">
+      <div class="section-heading">
+        <p class="meta-font" style="color:var(--gold-bright);">GRAND CELEBRATION</p>
+        <h2>कार्यक्रम स्थल का विवरण</h2>
+      </div>
+
+      <div class="info-box-dark">
+        <p><strong>📍 स्थल:</strong> समस्त वैवाहिक कार्यक्रम <strong>अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज</strong> में सम्पन्न होंगे।</p>
+        <p style="margin-top:8px;"><strong>🗓️ तिथियाँ:</strong><br>
+          • शुभ मेहंदी व शुभ हल्दी: <strong>29-11-2026 (रविवार)</strong><br>
+          • शुभ विवाह: <strong>30-11-2026 (सोमवार)</strong><br>
+          • कन्या विदाई: <strong>01-12-2026 (मंगलवार)</strong>
+        </p>
+      </div>
+
+      <div class="map-preview-card" style="color:var(--ink);">
+        <div class="pin-icon">📌</div>
+        <div style="font-weight:700; font-size:15px; color:var(--wine); margin-top:4px;">
+          अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज
+        </div>
+        <div style="font-size:12.5px; color:var(--muted); margin-top:3px;">
+          मैप खोलने या पता कॉपी करने के लिए नीचे दिए बटन का उपयोग करें
+        </div>
+        <div class="btn-row">
+          <a class="gold-btn" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Avantika+Marriage+Hall+Siswa+Bazar+Maharajganj">
+            🗺️ Get Directions
+          </a>
+          <button class="wine-btn" onclick="copyVenueAddress()">
+            📋 Copy Address
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE 7 & 8: VINEET, DARSHANABHILASHI & CLOSING -->
+    <section class="section-card" id="page-closing">
+      <div class="section-heading">
+        <h2>आपके आगमन की प्रतीक्षा में</h2>
+        <p>WE CAN’T WAIT TO CELEBRATE WITH YOU!</p>
+      </div>
+
+      <div class="person-box" style="margin-bottom:12px;">
+        <div style="font-size:12px; color:var(--muted);">विनीत</div>
+        <div style="font-size:18px; font-weight:700; color:var(--wine); margin-top:2px;">
+          श्री जगरनाथ जायसवाल
+        </div>
+        <div class="meta-font" style="font-size:13px; margin-top:4px; color:var(--ink);">
+          मो. <a href="tel:8874068810" style="color:var(--wine); font-weight:600; text-decoration:none;">8874068810</a>,
+          <a href="tel:9082176925" style="color:var(--wine); font-weight:600; text-decoration:none;">9082176925</a>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:14px; font-weight:700; color:var(--wine);">दर्शनाभिलाषी :</div>
+        <div class="darshana-list">
+          पप्पू, जागु, नानू, अखिलेश, अशोक, रमेश, इन्दल, जितेन्द्र, अजय, संदीप, सुनील, विशाल, विवेक, प्रदुम्मन, मुन्ना, विक्की, सन्नी, आकाश, शम्भू, रम्भू, <strong>शिवम</strong>, प्रियांशु एवं समस्त जायसवाल परिवार व मित्रगण ।
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGNER & CREATOR SECTION -->
+    <section class="designer-card" id="designer-credit">
+      <span class="designer-badge">✦ OFFICIAL DIGITAL INVITATION ARCHITECT ✦</span>
+      <h3 style="font-size:21px; color:var(--gold-bright);">Designed By SJ Shivam Jaiswal</h3>
+      <p style="font-size:12.5px; color:#f3dce2; margin-top:4px;">
+        SJ Shivam Jaiswal official Portfolio — यहाँ मेरी सभी डिटेल्स व प्रोजेक्ट्स मिलेंगे
+      </p>
+
+      <img class="designer-photo" src="designer.png" alt="SJ Shivam Jaiswal" onerror="this.style.display='none'" />
+
+      <div class="btn-row">
+        <a class="gold-btn" href="tel:6386623046">📞 Contact: 6386623046</a>
+        <a class="wine-btn" target="_blank" rel="noopener"
+           href="https://sites.google.com/view/sjshivamjaiswal-offi-portfolio/">
+          🌐 SJ Shivam Jaiswal official Portfolio
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // 1. Petals Generation
+    const petalsLayer = document.getElementById('petals-layer');
+    const petalColors = ['#ff8fa3', '#ffb3c1', '#e63946', '#ffd166', '#ffccd5'];
+
+    function spawnPetals(count = 18) {
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('div');
+        p.className = 'petal';
+        const size = 9 + Math.random() * 9;
+        p.style.width = size + 'px';
+        p.style.height = (size * 0.75) + 'px';
+        p.style.left = (Math.random() * 100) + 'vw';
+        p.style.background = petalColors[Math.floor(Math.random() * petalColors.length)];
+        p.style.setProperty('--drift', ((Math.random() - 0.5) * 140) + 'px');
+        const dur = 6 + Math.random() * 6;
+        p.style.animationDuration = dur + 's';
+        p.style.animationDelay = (Math.random() * 4) + 's';
+        petalsLayer.appendChild(p);
+        setTimeout(() => p.remove(), (dur + 4) * 1000);
+      }
+    }
+    spawnPetals(16);
+    setInterval(() => spawnPetals(8), 4500);
+
+    // 2. Touch / Click Sparkles
+    document.addEventListener('pointerdown', (e) => {
+      const sp = document.createElement('div');
+      sp.className = 'sparkle';
+      sp.style.left = (e.clientX - 4) + 'px';
+      sp.style.top = (e.clientY - 4) + 'px';
+      document.body.appendChild(sp);
+      setTimeout(() => sp.remove(), 750);
+    });
+
+    // 3. Soft Web Audio Chime (Mobile Browser Safe after Interaction)
+    let audioCtx = null;
+    let chimeTimer = null;
+    let isMusicPlaying = false;
+
+    function playGentleNote(freq = 523.25) {
+      if (!audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.001, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.035, audioCtx.currentTime + 0.12);
+      gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 1.4);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 1.45);
+    }
+
+    function startMusic() {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return;
+      if (!audioCtx) audioCtx = new AudioContext();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      if (isMusicPlaying) return;
+      isMusicPlaying = true;
+      document.getElementById('music-label').textContent = 'संगीत बंद करें';
+      const notes = [523.25, 587.33, 659.25, 783.99, 659.25, 587.33];
+      let idx = 0;
+      playGentleNote(notes[0]);
+      chimeTimer = setInterval(() => {
+        idx = (idx + 1) % notes.length;
+        playGentleNote(notes[idx]);
+      }, 1500);
+    }
+
+    function stopMusic() {
+      isMusicPlaying = false;
+      clearInterval(chimeTimer);
+      document.getElementById('music-label').textContent = 'संगीत ऑन';
+    }
+
+    function toggleMusic() {
+      if (isMusicPlaying) stopMusic();
+      else startMusic();
+    }
+
+    // 4. Open Book & Typing Animation
+    function openInvitation() {
+      document.getElementById('cover-screen').classList.add('opened');
+      burstPetals();
+      startMusic();
+      typeWriter('typed-bride', 'आयु० प्रियंका जायसवाल', 75);
+      setTimeout(() => {
+        typeWriter('typed-groom', 'चि० नन्दकिशोर जायसवाल (मुन्ना)', 70);
+      }, 900);
+    }
+
+    function typeWriter(elementId, text, speed) {
+      const el = document.getElementById(elementId);
+      if (!el || el.dataset.done === '1') return;
+      el.dataset.done = '1';
+      el.textContent = '';
+      let i = 0;
+      const timer = setInterval(() => {
+        el.textContent += text.charAt(i);
+        i++;
+        if (i >= text.length) clearInterval(timer);
+      }, speed);
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 120) {
+        typeWriter('typed-bride', 'आयु० प्रियंका जायसवाल', 65);
+        typeWriter('typed-groom', 'चि० नन्दकिशोर जायसवाल (मुन्ना)', 65);
+      }
+    }, { passive: true });
+
+    // 5. Countdown to 30 Nov 2026
+    const weddingDate = new Date('2026-11-30T18:00:00+05:30').getTime();
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = Math.max(0, weddingDate - now);
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+      document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 6. Swipeable Functions Carousel
+    const track = document.getElementById('fn-track');
+    const viewport = document.getElementById('fn-viewport');
+    const dotsContainer = document.getElementById('fn-dots');
+    const totalSlides = track.children.length;
+    let currentSlide = 0;
+
+    for (let i = 0; i < totalSlides; i++) {
+      const b = document.createElement('button');
+      b.className = 'dot' + (i === 0 ? ' active' : '');
+      b.onclick = () => goToSlide(i);
+      dotsContainer.appendChild(b);
+    }
+
+    function goToSlide(index) {
+      currentSlide = (index + totalSlides) % totalSlides;
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      [...dotsContainer.children].forEach((d, idx) => {
+        d.classList.toggle('active', idx === currentSlide);
+      });
+    }
+
+    function moveSlide(step) {
+      goToSlide(currentSlide + step);
+    }
+
+    let startX = 0;
+    viewport.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+    viewport.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      if (startX - endX > 45) moveSlide(1);
+      else if (endX - startX > 45) moveSlide(-1);
+    }, { passive: true });
+
+    // 7. Calendar & Toast Actions
+    function showToast(msg) {
+      const t = document.getElementById('toast-box');
+      t.textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2600);
+    }
+
+    function burstPetals() {
+      spawnPetals(24);
+      showToast('🌸 मंगलमय पुष्प वर्षा व स्नेहाशीष!');
+    }
+
+    function celebrateScroll() {
+      burstPetals();
+      startMusic();
+    }
+
+    function copyVenueAddress() {
+      const addr = 'अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज';
+      navigator.clipboard?.writeText(addr);
+      showToast('📋 पता कॉपी हो गया: ' + addr);
+    }
+
+    function addWeddingToCalendar() {
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'BEGIN:VEVENT',
+        'DTSTART:20261130T123000Z',
+        'DTEND:20261130T183000Z',
+        'SUMMARY:शुभ विवाह — प्रियंका जायसवाल & नन्दकिशोर जायसवाल (मुन्ना)',
+        'LOCATION:अवन्तिका मैरेज हाल, सिसवा बाजार, जिला-महराजगंज',
+        'DESCRIPTION:शुभ मेहंदी व हल्दी: 29-11-2026 | शुभ विवाह: 30-11-2026 | कन्या विदाई: 01-12-2026',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Shubh-Vivah-Priyanka-Nandkishor.ics';
+      a.click();
+      URL.revokeObjectURL(url);
+      showToast('📅 कैलेंडर फाइल तैयार हो गई है!');
+    }
+  </script>
+</body>
+</html>
